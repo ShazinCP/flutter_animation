@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation/controller/locale_Provider.dart';
+import 'package:flutter_animation/controller/locale_provider.dart';
 import 'package:flutter_animation/controller/trip_provider.dart';
 import 'package:provider/provider.dart';
 

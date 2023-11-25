@@ -12,3 +12,17 @@ class MenuWidget extends StatelessWidget {
     );
   }
 }
+
+// class MenuWidget extends StatelessWidget {
+//   final BuildContext context;
+
+//   const MenuWidget({Key? key, required this.context}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return IconButton(
+//       onPressed: () => ZoomDrawer.of(this.context)?.toggle(),
+//       icon: const Icon(Icons.menu),
+//     );
+//   }
+// }

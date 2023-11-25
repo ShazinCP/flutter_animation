@@ -1,43 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/model/trip_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TripService {
   List<TripModel> fetchTrips(BuildContext context) {
     return [
       TripModel(
-        title: AppLocalizations.of(context)!.munnartitle,
-        price: '350',
-        nights: '3',
-        img: 'munnar.jpg',
-        details: AppLocalizations.of(context)!.munnardetails,
+        title: AppLocalizations.of(context)!.burgertitle,
+        price: '50',
+        img: 'burger.jpg',
+        details: AppLocalizations.of(context)!.burgerdetails,
       ),
       TripModel(
-        title: AppLocalizations.of(context)!.dubaititle,
-        price: '400',
-        nights: '5',
-        img: 'dubai.jpg',
-        details: AppLocalizations.of(context)!.dubaidetails,
+        title: AppLocalizations.of(context)!.broasttitle,
+        price: '200',
+        img: 'broasted_chicken.jpg',
+        details: AppLocalizations.of(context)!.broastdetails,
       ),
       TripModel(
-        title: AppLocalizations.of(context)!.japantitle,
+        title: AppLocalizations.of(context)!.friedchickentitle,
         price: '750',
-        nights: '2',
-        img: 'japan.jpg',
-        details: AppLocalizations.of(context)!.japandetails,
+        img: 'korean_friedchicken.jpg',
+        details: AppLocalizations.of(context)!.friedchickendetails,
       ),
       TripModel(
-        title: AppLocalizations.of(context)!.kashmirtitle,
+        title: AppLocalizations.of(context)!.beefsteaktitle,
         price: '600',
-        nights: '4',
-        img: 'kashmir.jpg',
-        details: AppLocalizations.of(context)!.kashmirdetails,
+        img: 'beef_steak.jpg',
+        details: AppLocalizations.of(context)!.beefsteakdetails,
       ),
     ];
   }
 }
-
-
-
-
-
-

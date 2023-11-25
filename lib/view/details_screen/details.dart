@@ -7,17 +7,18 @@ import 'package:flutter_animation/view/details_screen/widgets/heart_icon.dart';
 class TripDetails extends StatelessWidget {
 
   final TripModel trip;
-  const TripDetails({super.key,  required this.trip });
+  const TripDetails({super.key,  required this.trip});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: cBlackColor,
       appBar: AppBar(
         backgroundColor: cTransparentColor,
         elevation: 0,
       ),
       extendBodyBehindAppBar: true,
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -25,7 +26,7 @@ class TripDetails extends StatelessWidget {
               child: Hero(
                 tag:'tag${trip.img}' ,
                 child: Image.asset(
-                  'assets/images/${trip.img}',
+                  'assets/${trip.img}',
                   height: 360,
                   fit: BoxFit.cover,
                   alignment: Alignment.topCenter,
@@ -36,15 +37,15 @@ class TripDetails extends StatelessWidget {
             ListTile(
               title:Text(
                 trip.title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  color: cGreyColorShade800
+                  fontSize: 25,
+                  color: cLightYellowColor
                 )
               ),
               subtitle: Text(
-                '${trip.nights} night stay for only \$${trip.price}',
-                style: const TextStyle(letterSpacing: 1)
+                'Serve With in 10 minutes \n ₹${trip.price}',
+                style:  TextStyle(letterSpacing: 1,color: cGreyColorShade600)
               ),
               trailing: const HeartIcon()
             ),

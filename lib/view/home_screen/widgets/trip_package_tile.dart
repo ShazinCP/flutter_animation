@@ -28,13 +28,12 @@ class TripPackageTile extends StatelessWidget {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text('${trip.nights} nights',
-                  style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: cWhiteColor)),
-              Text(
-                trip.title,
+              // Text('${trip.nights} nights',
+              //     style: const TextStyle(
+              //         fontSize: 14,
+              //         fontWeight: FontWeight.bold,
+              //         color: cWhiteColor)),
+              Text(trip.title,
                   style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -45,7 +44,7 @@ class TripPackageTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
             child: Hero(
               tag: 'tag${trip.img}',
-              child: Image.asset('assets/images/${trip.img}', height: 50.0),
+              child: Image.asset('assets/${trip.img}', height: 50.0),
             ),
           ),
           trailing: Text(
