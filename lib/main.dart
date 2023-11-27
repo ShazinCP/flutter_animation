@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation/controller/heart_icon_provider.dart';
+import 'package:flutter_animation/controller/thumb_icon_provider.dart';
 import 'package:flutter_animation/controller/locale_provider.dart';
 import 'package:flutter_animation/controller/trip_provider.dart';
 import 'package:flutter_animation/l10n/l10n.dart';
@@ -15,7 +15,7 @@ void main() {
         create: (context) => LocaleProvider(),
       ),
       ChangeNotifierProvider(
-        create: (context) => HeartIconProvider(),
+        create: (context) => ThumbIconProvider(),
       ),
       ChangeNotifierProvider(
         create: (context) => TripProvider(),

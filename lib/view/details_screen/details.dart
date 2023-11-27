@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animation/constants/colors.dart';
 import 'package:flutter_animation/constants/sizedbox.dart';
 import 'package:flutter_animation/model/food_model.dart';
-import 'package:flutter_animation/view/details_screen/widgets/heart_icon.dart';
+import 'package:flutter_animation/view/details_screen/widgets/thumb_icon.dart';
 
 class TripDetails extends StatelessWidget {
 

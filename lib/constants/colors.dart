@@ -11,6 +11,7 @@ const cLightYellowColor = Color.fromRGBO(254, 208, 63, 1);
 const cdeepLightYellowColor = Color.fromRGBO(202, 183, 125, 1);
 const cdeepLightYellowColor2 = Color.fromRGBO(211, 161, 9, 1);
 const cRedColor = Colors.red;
+const cBluenColor = Colors.blue;
 const cTransparentColor = Colors.transparent;
 final cGreyColorShade600 = Colors.grey.shade600;
 final cGreyColorShade800 = Colors.grey.shade800;
