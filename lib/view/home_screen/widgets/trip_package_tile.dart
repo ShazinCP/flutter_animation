@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/constants/colors.dart';
-import 'package:flutter_animation/model/trip_model.dart';
+import 'package:flutter_animation/model/food_model.dart';
 import 'package:flutter_animation/view/details_screen/details.dart';
 
 class TripPackageTile extends StatelessWidget {
@@ -11,7 +11,7 @@ class TripPackageTile extends StatelessWidget {
   });
 
   final BuildContext context;
-  final TripModel trip;
+  final FoodModel trip;
 
   @override
   Widget build(BuildContext context) {
