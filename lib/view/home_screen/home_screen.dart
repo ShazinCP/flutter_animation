@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/constants/colors.dart';
 import 'package:flutter_animation/constants/sizedbox.dart';
+import 'package:flutter_animation/view/home_screen/widgets/dropdown_button_widget.dart';
 import 'package:flutter_animation/view/home_screen/widgets/menu_widget.dart';
 import 'package:flutter_animation/view/home_screen/widgets/screen_title.dart';
 import 'package:flutter_animation/view/home_screen/widgets/triplist.dart';
@@ -16,11 +17,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext ctx) {
-//     final zoomDrawer = ZoomDrawer.of(context);
-// if (zoomDrawer != null) {
-//   zoomDrawer.toggle();
-// }
-
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.all(20),
@@ -34,7 +30,13 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             cHeight20,
-             const MenuWidget(),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+                //  MenuWidget(),
+                 DropdownButtonWidget(),
+               ],
+             ),
             cHeight10,
             SizedBox(
               height: 130,

@@ -28,14 +28,9 @@ class TripPackageTile extends StatelessWidget {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              // Text('${trip.nights} nights',
-              //     style: const TextStyle(
-              //         fontSize: 14,
-              //         fontWeight: FontWeight.bold,
-              //         color: cWhiteColor)),
               Text(trip.title,
                   style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: cWhiteColor)),
             ],

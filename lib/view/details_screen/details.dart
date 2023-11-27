@@ -44,7 +44,7 @@ class TripDetails extends StatelessWidget {
                 )
               ),
               subtitle: Text(
-                'Serve With in 10 minutes \n ₹${trip.price}',
+                '₹${trip.price}',
                 style:  TextStyle(letterSpacing: 1,color: cGreyColorShade600)
               ),
               trailing: const HeartIcon()

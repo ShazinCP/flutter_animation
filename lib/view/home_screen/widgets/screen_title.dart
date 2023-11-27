@@ -28,22 +28,16 @@ class ScreenTitle extends StatelessWidget {
           totalRepeatCount: 2,
         ),
         Center(
-          child: Container(
-           decoration: BoxDecoration( color: cLightBrownWithOpacity,borderRadius: BorderRadius.circular(15)),
-            child: ClipRRect(
-                borderRadius: BorderRadius.circular(30),
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 1, sigmaY: 1),
-                  child: Text(
-                    text ?? '',
-                    style: const TextStyle(
-                      fontSize: 40,
-                      color: cWhiteColor,
-                      fontWeight: FontWeight.w900,
-                    ),
-                  ),
-                  ),
-            ),
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
+              child: Text(
+                text ?? '',
+                style: const TextStyle(
+                  fontSize: 37,
+                  color: cBlackColor,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
           ),
         )
       ],
