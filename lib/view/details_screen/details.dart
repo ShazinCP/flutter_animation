@@ -4,10 +4,10 @@ import 'package:flutter_animation/constants/sizedbox.dart';
 import 'package:flutter_animation/model/food_model.dart';
 import 'package:flutter_animation/view/details_screen/widgets/thumb_icon.dart';
 
-class TripDetails extends StatelessWidget {
+class FoodDetails extends StatelessWidget {
 
-  final FoodModel trip;
-  const TripDetails({super.key,  required this.trip});
+  final FoodModel food;
+  const FoodDetails({super.key,  required this.food});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,9 @@ class TripDetails extends StatelessWidget {
           children: <Widget>[
             ClipRRect(
               child: Hero(
-                tag:'tag${trip.img}' ,
+                tag:'tag${food.img}' ,
                 child: Image.asset(
-                  'assets/${trip.img}',
+                  'assets/${food.img}',
                   height: 360,
                   fit: BoxFit.cover,
                   alignment: Alignment.topCenter,
@@ -36,7 +36,7 @@ class TripDetails extends StatelessWidget {
            cHeight30,
             ListTile(
               title:Text(
-                trip.title,
+                food.title,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
@@ -44,7 +44,7 @@ class TripDetails extends StatelessWidget {
                 )
               ),
               subtitle: Text(
-                '₹${trip.price}',
+                '₹${food.price}',
                 style:  TextStyle(letterSpacing: 1,color: cGreyColorShade600)
               ),
               trailing: const HeartIcon()
@@ -52,7 +52,7 @@ class TripDetails extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(18),
               child:Text(
-                trip.details,
+                food.details,
                 style: TextStyle(
                   color: cGreyColorShade600,
                   height: 1.4

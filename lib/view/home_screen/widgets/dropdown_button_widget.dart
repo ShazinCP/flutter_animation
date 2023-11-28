@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/constants/border_radius.dart';
 import 'package:flutter_animation/constants/colors.dart';
 import 'package:flutter_animation/controller/locale_provider.dart';
 import 'package:provider/provider.dart';
@@ -13,9 +14,7 @@ class DropdownButtonWidget extends StatelessWidget {
         return PopupMenuButton(
           color: cLightBrownWithOpacity,
           shape: ContinuousRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              20,
-            ),
+            borderRadius: cRadius20,
           ),
           itemBuilder: ((context) => [
                 PopupMenuItem(

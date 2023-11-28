@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/controller/locale_provider.dart';
-import 'package:flutter_animation/controller/trip_provider.dart';
+import 'package:flutter_animation/controller/food_provider.dart';
 import 'package:provider/provider.dart';
 
-class TripList extends StatefulWidget {
-  const TripList({super.key});
+class FoodList extends StatefulWidget {
+  const FoodList({super.key});
 
   @override
-  _TripListState createState() => _TripListState();
+  // ignore: library_private_types_in_public_api
+  _FoodListState createState() => _FoodListState();
 }
 
-class _TripListState extends State<TripList> {
+class _FoodListState extends State<FoodList> {
   final Tween<Offset> _offset = Tween(begin: const Offset(1, 3), end: const Offset(0, 0));
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      Provider.of<TripProvider>(context, listen: false).fetchTrips(context);
+      Provider.of<FoodProvider>(context, listen: false).fetchFoods(context);
     });
   }
 
@@ -26,22 +27,22 @@ class _TripListState extends State<TripList> {
     return Consumer<LocaleProvider>(
       builder: (context, value, child) {
         if (value.locale != LocaleProvider.previousLocale) {
-          Provider.of<TripProvider>(context, listen: false).fetchTrips(context);
+          Provider.of<FoodProvider>(context, listen: false).fetchFoods(context);
           LocaleProvider.previousLocale = value.locale;
         }
         return AnimatedList(
-            key: Provider.of<TripProvider>(context).listKey,
+            key: Provider.of<FoodProvider>(context).listKey,
             initialItemCount:
-                Provider.of<TripProvider>(context).tripPackageTiles.length,
+                Provider.of<FoodProvider>(context).foodPackageTiles.length,
             itemBuilder: (context, index, animation) {
               if (index >=
-                  Provider.of<TripProvider>(context).tripPackageTiles.length) {
+                  Provider.of<FoodProvider>(context).foodPackageTiles.length) {
                 return Container();
               }
               return SlideTransition(
                 position: animation.drive(_offset),
                 child:
-                    Provider.of<TripProvider>(context).tripPackageTiles[index],
+                    Provider.of<FoodProvider>(context).foodPackageTiles[index],
               );
             });
       },

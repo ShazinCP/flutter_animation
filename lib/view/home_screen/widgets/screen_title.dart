@@ -1,7 +1,6 @@
-import 'dart:ui';
-
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/constants/border_radius.dart';
 import 'package:flutter_animation/constants/colors.dart';
 
 class ScreenTitle extends StatelessWidget {
@@ -29,7 +28,7 @@ class ScreenTitle extends StatelessWidget {
         ),
         Center(
           child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: cRadius30,
               child: Text(
                 text ?? '',
                 style: const TextStyle(

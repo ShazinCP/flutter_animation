@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/constants/border_radius.dart';
 import 'package:flutter_animation/constants/colors.dart';
 import 'package:flutter_animation/model/food_model.dart';
 import 'package:flutter_animation/view/details_screen/details.dart';
 
-class TripPackageTile extends StatelessWidget {
-  const TripPackageTile({
+class FoodPackageTile extends StatelessWidget {
+  const FoodPackageTile({
     super.key,
     required this.context,
-    required this.trip,
+    required this.food,
   });
 
   final BuildContext context;
-  final FoodModel trip;
+  final FoodModel food;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +23,13 @@ class TripPackageTile extends StatelessWidget {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => TripDetails(trip: trip)));
+                    builder: (context) => FoodDetails(food: food)));
           },
           contentPadding: const EdgeInsets.all(25),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(trip.title,
+              Text(food.title,
                   style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
@@ -36,14 +37,14 @@ class TripPackageTile extends StatelessWidget {
             ],
           ),
           leading: ClipRRect(
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: cRadius8,
             child: Hero(
-              tag: 'tag${trip.img}',
-              child: Image.asset('assets/${trip.img}', height: 50.0),
+              tag: 'tag${food.img}',
+              child: Image.asset('assets/${food.img}', height: 50.0),
             ),
           ),
           trailing: Text(
-            '\$${trip.price}',
+            '\$${food.price}',
             style: const TextStyle(color: cWhiteColor),
           ),
         ),

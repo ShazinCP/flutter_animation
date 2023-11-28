@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animation/model/food_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class TripService {
-  List<FoodModel> fetchTrips(BuildContext context) {
+class FoodService {
+  List<FoodModel> fetchFoods(BuildContext context) {
     return [
       FoodModel(
         title: AppLocalizations.of(context)!.burgertitle,

@@ -14,5 +14,5 @@ class ThumbIconProvider extends ChangeNotifier {
       targetvalue = 30;
     }
     notifyListeners();
-  }
+  } 
 }

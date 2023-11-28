@@ -7,5 +7,5 @@ const cHeight40 = SizedBox(height: 40);
 const cHeight50 = SizedBox(height: 50);
 
 
-const cWidth10 = SizedBox(height: 10);
-const cWidth20 = SizedBox(height: 20);
+const cWidth10 = SizedBox(width: 10);
+const cWidth20 = SizedBox(width: 20);

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/constants/border_radius.dart';
 import 'package:flutter_animation/constants/colors.dart';
 import 'package:flutter_animation/constants/sizedbox.dart';
 import 'package:flutter_animation/view/home_screen/widgets/dropdown_button_widget.dart';
-import 'package:flutter_animation/view/home_screen/widgets/menu_widget.dart';
 import 'package:flutter_animation/view/home_screen/widgets/screen_title.dart';
-import 'package:flutter_animation/view/home_screen/widgets/triplist.dart';
+import 'package:flutter_animation/view/home_screen/widgets/foodlist.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,8 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 500,
               decoration: BoxDecoration(
                   color: cLightBrownWithOpacity,
-                  borderRadius: BorderRadius.circular(20)),
-              child: const TripList(),
+                  borderRadius: cRadius20),
+              child: const FoodList(),
             ),
           ],
         ),
