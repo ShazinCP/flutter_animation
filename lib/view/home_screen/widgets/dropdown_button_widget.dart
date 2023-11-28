@@ -33,17 +33,17 @@ class DropdownButtonWidget extends StatelessWidget {
                   child: const Text("Spanish",style: TextStyle(color: cWhiteColor,fontWeight: FontWeight.bold),),
                 ),
                  PopupMenuItem(
-                  value: 3,
+                  value: 4,
                   onTap: () => value.setLocale(const Locale('ml')),
                   child: const Text("Malayalam",style: TextStyle(color: cWhiteColor,fontWeight: FontWeight.bold),),
                 ),
                 PopupMenuItem(
-                  value: 3,
+                  value: 5,
                   onTap: () => value.setLocale(const Locale('ar')),
                   child: const Text("Arabic",style: TextStyle(color: cWhiteColor,fontWeight: FontWeight.bold),),
                 ),
                  PopupMenuItem(
-                  value: 3,
+                  value: 6,
                   onTap: () => value.setLocale(const Locale('ko')),
                   child: const Text("Korean",style: TextStyle(color: cWhiteColor,fontWeight: FontWeight.bold),),
                 ),

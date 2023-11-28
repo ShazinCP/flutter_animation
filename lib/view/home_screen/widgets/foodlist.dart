@@ -12,7 +12,8 @@ class FoodList extends StatefulWidget {
 }
 
 class _FoodListState extends State<FoodList> {
-  final Tween<Offset> _offset = Tween(begin: const Offset(1, 3), end: const Offset(0, 0));
+  final Tween<Offset> _offset =
+      Tween(begin: const Offset(1, 3), end: const Offset(0, 0));
 
   @override
   void initState() {
@@ -31,20 +32,20 @@ class _FoodListState extends State<FoodList> {
           LocaleProvider.previousLocale = value.locale;
         }
         return AnimatedList(
-            key: Provider.of<FoodProvider>(context).listKey,
-            initialItemCount:
-                Provider.of<FoodProvider>(context).foodPackageTiles.length,
-            itemBuilder: (context, index, animation) {
-              if (index >=
-                  Provider.of<FoodProvider>(context).foodPackageTiles.length) {
-                return Container();
-              }
-              return SlideTransition(
-                position: animation.drive(_offset),
-                child:
-                    Provider.of<FoodProvider>(context).foodPackageTiles[index],
-              );
-            });
+          key: Provider.of<FoodProvider>(context).listKey,
+          initialItemCount:
+              Provider.of<FoodProvider>(context).foodPackageTiles.length,
+          itemBuilder: (context, index, animation) {
+            if (index >=
+                Provider.of<FoodProvider>(context).foodPackageTiles.length) {
+              return Container();
+            }
+            return SlideTransition(
+              position: animation.drive(_offset),
+              child: Provider.of<FoodProvider>(context).foodPackageTiles[index],
+            );
+          },
+        );
       },
     );
   }
